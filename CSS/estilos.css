@@ -1,0 +1,143 @@
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-233deg, #000000 40%, rgba(203, 59, 59, 0) 65%) no-repeat;
+}
+
+main .foto {
+    display: none;
+    height: 100vh;
+}
+
+main .foto.selecionado {
+    display: block;
+}
+
+main .foto .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome-foto {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+
+.conteudo .logo {
+    background-image: url("../icone/AY-logo.png");
+    background-size: cover;
+    height: 290px;
+    width: 240px;
+    margin-bottom: 35px;
+    margin-left: 35px; /* Ajuste o valor conforme necessário */
+}
+
+.botoes {
+    position: fixed;
+    top: 0px; /* Espaço adicional no topo para os botões serem acessíveis */
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    height: calc(100vh - 0px); /* Ajuste na altura para compensar o espaço adicional no topo */
+    justify-content: flex-start; /* Alinhar no topo */
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Estilização da barra de rolagem */
+.botoes::-webkit-scrollbar {
+    width: 10px;
+}
+
+.botoes::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.botoes::-webkit-scrollbar-thumb:hover {
+    background: #fdfcfc;
+}
+
+.botoes::-webkit-scrollbar-track {
+    background:  #000000 40%;
+}
+
+.botoes .botao {
+    border: none;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botoes .botao img {
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+#scroll-up, #scroll-down {
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scroll-up {
+    top: 10px;
+}
+
+#scroll-down {
+    bottom: 10px;
+}
+
+.conteudo a {
+    color: rgb(255, 255, 255); /* Definindo a cor roxa para o link */
+    font-weight: bold; /* Deixando o texto do link em negrito */
+    transition: 1s;
+}
+
+.conteudo a:hover {
+    color: purple;
+    text-shadow: 0 0 8px white;
+}
